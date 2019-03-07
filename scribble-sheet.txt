@@ -1,0 +1,103 @@
+
+/*https://www.html5rocks.com/en/tutorials/dnd/basics/*/
+var dragSrcEl = null;
+
+function handleDragStart(e) {
+  this.style.opacity = '0.4';  // this / e.target is the source node.
+
+  dragSrcEl = this;
+
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/html', this.innerHTML);
+}
+
+function handleDragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault(); // Necessary. Allows us to drop.
+  }
+
+  e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+
+  return false;
+}
+
+function handleDragEnter(e) {
+  // this / e.target is the current hover target.
+  this.classList.add('beat-line-over');
+}
+
+function handleDragLeave(e) {
+  this.classList.remove('over');  // this / e.target is previous target element.
+}
+
+function handleDrop(e) {
+  // this / e.target is current target element.
+
+  if (e.stopPropagation) {
+    e.stopPropagation(); // stops the browser from redirecting.
+  }
+
+  // See the section on the DataTransfer object.
+
+  return false;
+}
+
+function handleDragEnd(e) {
+  // this/e.target is the source node.
+/*  [].forEach.call(choices, function (choice) {
+    this.style.opacity = '1';  
+   });*/ 
+  [].forEach.call(dropSpots, function (beat) {
+    beat.classList.remove('beat-line-over');
+  });
+}
+
+var choices = document.querySelectorAll('.test-object, .choice');  /*.choice-container .choice*/
+[].forEach.call(choices, function(choice) {
+  choice.addEventListener('dragstart', handleDragStart, false);
+  
+  
+  choice.addEventListener('drop', handleDrop, false);
+  choice.addEventListener('dragend', handleDragEnd, false);
+});
+
+var dropSpots = document.querySelectorAll('.beat-line');
+[].forEach.call(dropSpots, function(beat) {
+  beat.addEventListener('dragenter', handleDragEnter, false);
+  beat.addEventListener('dragover', handleDragOver, false);
+  beat.addEventListener('dragleave', handleDragLeave, false);
+});
+
+
+
+
+
+//CHECK FOR NATIVE DRAG AND DROP
+/*if (Modernizr.draganddrop) {
+  // Browser supports HTML5 DnD.
+} else {
+  // Fallback to a library solution.
+}*/
+
+
+
+/*const draggable = document.getElementsByClassName('draggable')[0]
+const containers = document.getElementsByClassName('note-choice-container')
+for(const container of containers) {
+  container.addEventListener("dragover", dragover)
+  container.addEventListener("dragenter", dragenter)
+  container.addEventListener("drop", drop)
+}
+
+function dragover(e) {
+  e.preventDefault()
+}
+function dragenter(e) {
+  e.preventDefault()
+}
+function drop() {
+  this.append(beat-line)
+}*/
+
+
+/*document.getElementById("test").innerHTML = "JS is connected!";*/

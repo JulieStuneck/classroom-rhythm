@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rhythms</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- 	<div id="test"></div> -->
+	<div class="container">
+
+		<section class="heading">
+			<h1>Rhythm Creator</h1>
+		</section> <!-- end heading -->
+
+		<section class="parameters">
+			<button>Meter:
+				<select name="meter">
+					<option>duple</option>
+					<option>compound</option>
+				</select>	
+			</button>
+
+			<button>Beats/Measure:
+				<select name="num-beats">					
+					<option class="num-beats" value="2">2</option>
+					<option class="num-beats" value="3">3</option>
+					<option class="num-beats" value="4">4</option>	
+					<option class="num-beats" value="5">6</option>				
+				</select>	
+			</button>
+
+			<button>Number of Measures:
+				<select name="num-measures">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>					
+				</select>	
+			</button>
+
+			<button>Note Values:
+				<select name="note-values">
+					<option>whole</option>
+					<option>half</option>
+					<option>quarter</option>
+					<option>eigth</option>
+				</select>	
+			</button>			
+		</section> <!-- end parameters -->
+
+		<section class="work-area">
+			<div class="meter">
+				<div id="meter-top">4</div>
+				<div class="meter-bottom">4</div>				
+			</div>
+			<div class="measure">
+				<div class="beat-line" id="beat-1"></div>
+				<div class="beat-line" id="beat-2"></div>
+				<div class="beat-line" id="beat-3"></div>
+				<div class="beat-line"></div>
+				<div class="bar-line"></div>
+				<div class="beat-line"></div>
+				<div class="beat-line"></div>
+				<div class="beat-line"></div>
+				<div class="beat-line"></div>
+			</div>
+		</section> <!-- end work-area -->
+
+
+
+		<section class="choice-container">
+			<div>
+				<h3>Eraser</h3>				
+				<img src="./Images/eraser-tiny.png" alt="eraser."  class="choice" id="eraser">
+			</div>
+			<div>
+				<h3>Whole Note</h3>
+				<img src="./Images/whole5.png" alt="whole note." class="choice">
+			</div>
+			<div>
+				<h3>Half Note</h3>
+				<img src="./Images/half5.png" alt="half note." class="choice">
+			</div>
+			<div>
+				<h3>Quarter Note</h3>
+				<img src="./Images/quarter5.png" alt="quarter note." class="choice">
+			</div>
+			<div>
+				<h3>Eighth Notes</h3>
+				<img src="./Images/two-eighths5.png" alt="two eigth-notes." draggable="true" class="choice">
+			</div>
+		</section> <!-- end note-choices -->
+
+	</div> <!-- end container -->
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
