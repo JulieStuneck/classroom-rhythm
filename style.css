@@ -14,8 +14,9 @@
 	padding: 3em;
 }
 
-.beat-line-over {
-	border-bottom: 3px dashed #222;
+.beat-line:hover {
+	background-color: yellow;
+	/*border-bottom: 3px dashed #222;*/
 }
 
 button {
@@ -24,18 +25,24 @@ button {
 }
 
 .choice-container {
+	background-color: #eee;
 	display: flex;
 	font-family: sans-serif;
 	justify-content: space-around;
+	padding: 2em;
 }
 
-.choice {cursor: pointer;
-	
+.choice {
+	cursor: pointer;	
+}
+
+.choice:hover {
+	border: 3px solid yellow;
 }
 
 .container {
 	display: grid;
-	grid-template-rows: 1fr 1fr 8fr 2fr;
+	grid-template-rows: auto auto 3fr 1fr;
 }
 
 .heading {
@@ -52,8 +59,9 @@ button {
 }
 
 .meter {
+	padding-top: 3em;
 	margin-left: .25em;
-	/*font-family: serif;*/
+	font-family: serif;
 	font-size: 3.5rem;
 	font-weight: 700;
 }
@@ -63,18 +71,17 @@ button {
 	padding: 0em 10em;
 	justify-content: space-around;
 	background-color: #ccc;
+	/*display: none;*/
+	
 }
 
-.test-object {
-	height: 25px;
-  	width: 25px;
-  	background-color: green;
-  	border-radius: 50%;
-  	display: inline-block;
-  	cursor: move
+.parameters:hover {
+	display: block;
+	
 }
+
 
 .work-area {
-	padding-top: 2em;
-	background-color: #eee;
+	max-width: 1024px;
+
 }

@@ -46,8 +46,6 @@ chosen.forEach(el => {
   })  
 });*/
 
-
-
 //same functionality - looks better(?)
 function addChoice(e) {
     console.log('beat choice made');
@@ -56,8 +54,8 @@ function addChoice(e) {
     beatLocationParent = beatLocation.parentElement; 
 
     if (chosenRhythm.id === "eraser") {
-      //beatLocation = e.target;
-      beatLocationChild.beatLocation.removeChild(beatLocationChild[0]); 
+      beatLocation = e.target;
+      beatLocation.beatLocationParent.removeChild(beatLocation); 
     }
 
     beatLocation.appendChild(chosenRhythm);    
