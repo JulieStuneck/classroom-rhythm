@@ -13,39 +13,54 @@
 			<h1>Rhythm Creator</h1>
 		</section> <!-- end heading -->
 
+		<!-- Options Button and Modal for Selections -->
 		<section>
 			<button class="options-btn" id="options-btn">Options</button>
-			<div class="options-modal" id="options-modal">
+			<div class="options-modal" id="options-modal">				
 				<div class="options-modal-content">
-					<label>Meter</label>
-					<input type="radio" name="meter" value="duple">Duple<br>
-					<input type="radio" name="meter" value ="compound">Compound<br>
+					<h3>Options</h3>
+					<div class="modal-content-columns">
+						<div class="column-one">
+							<label>Meter</label>
+							<div>
+								<input type="radio" name="meter" value="duple">Duple<br>
+								<input type="radio" name="meter" value ="compound">Compound<br>
+							</div>
 
-					<label>Beats per Measure</label>
-					<input type="radio" name="num-beats" value="2">2<br>
-					<input type="radio" name="num-beats" value="3">3<br>
-					<input type="radio" name="num-beats" value="4">4<br>
-					<input type="radio" name="num-beats" value="6">6<br>
+							<label>Beats per Measure</label>
+							<div>
+								<input type="radio" name="num-beats" value="2">2<br>
+								<input type="radio" name="num-beats" value="3">3<br>
+								<input type="radio" name="num-beats" value="4">4<br>
+								<input type="radio" name="num-beats" value="6">6<br>			
+							</div>
 
-					<label>Number of Measures</label>
-					<input type="radio" name="num-meas" value="2">2<br>
-					<input type="radio" name="num-meas" value="4">4<br>
-					<input type="radio" name="num-meas" value="8">8<br>
+							<label>Number of Measures</label>
+							<div>
+								<input type="radio" name="num-meas" value="2">2<br>
+								<input type="radio" name="num-meas" value="4">4<br>
+								<input type="radio" name="num-meas" value="8">8<br>				
+							</div>						
+						</div> <!-- end column-one -->				
 
-					<label>Note Values</label>
-					<p>Select which types of rhythms you would like to use:</p>
-					<input type="checkbox" name="note-value" value="whole">Whole Note<br>
-					<input type="checkbox" name="note-value" value="half">Half Note<br>
-					<input type="checkbox" name="note-value" value="quater">Quarter Note<br>
-					<input type="checkbox" name="note-value" value="two-eighths">Two Eighth Notes<br>
-					<input type="checkbox" name="note-value" value="quater-rest">Quarter Rest<br>
-
-					<div class="options-modal-close" id="options-close">Done</div>
-				</div>				
-			</div>
-			
-			
+						<div class="column-two">
+							<label>Note Values</label>
+							<p>Select which types of rhythms you would like to use:</p>
+							<div>
+								<input type="checkbox" name="note-value" value="whole">Whole Note<br>
+								<input type="checkbox" name="note-value" value="half">Half Note<br>
+								<input type="checkbox" name="note-value" value="quater">Quarter Note<br>
+								<input type="checkbox" name="note-value" value="two-eighths">Two Eighth Notes<br>
+								<input type="checkbox" name="note-value" value="quater-rest">Quarter Rest<br>
+							</div>						
+						</div>
+						</div> <!-- end column-two -->
+					
+					<div class="options-modal-close" id="options-close">Done</div>		
+				</div> <!-- end options-modal-content -->						
+			</div> <!-- end options-modal -->			
 		</section> <!-- end options -->
+
 
 		<section class="work-area">
 			<div class="meter">
