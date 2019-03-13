@@ -116,3 +116,13 @@ button {
 .work-area {
 	max-width: 1024px;
 }
+
+.parameters:hover {
+	display: block;
+	
+}
+
+
+.work-area {
+	max-width: 1024px;
+}
