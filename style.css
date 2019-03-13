@@ -30,12 +30,21 @@ button {
 	font-family: sans-serif;
 	justify-content: space-around;
 	padding: 2em;
+<<<<<<< HEAD
 }
 
 .choice {
 	cursor: pointer;	
 }
 
+=======
+}
+
+.choice {
+	cursor: pointer;	
+}
+
+>>>>>>> origin/master
 .choice:hover {
 	border: 3px solid yellow;
 }
@@ -70,6 +79,7 @@ button {
 	display: flex;
 	padding: 0em 10em;
 	justify-content: space-around;
+<<<<<<< HEAD
 	background-color: #ccc;	
 }
 
@@ -110,4 +120,20 @@ button {
 
 .work-area {
 	max-width: 1024px;
+=======
+	background-color: #ccc;
+	/*display: none;*/
+	
+}
+
+.parameters:hover {
+	display: block;
+	
+}
+
+
+.work-area {
+	max-width: 1024px;
+
+>>>>>>> origin/master
 }
