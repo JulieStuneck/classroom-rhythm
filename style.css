@@ -66,22 +66,43 @@ button {
 	font-weight: 700;
 }
 
-.parameters {
-	display: flex;
-	padding: 0em 10em;
-	justify-content: space-around;
-	background-color: #ccc;
-	/*display: none;*/
-	
+.options-btn {
+
 }
 
-.parameters:hover {
-	display: block;
-	
+.options-modal {
+	display: none; 
+  	position: fixed; 
+  	z-index: 1;
+  	left: 10%;
+  	top: 10%;
+ 	width: 80%;
+  	height: 80%; 
+  	overflow: auto;
+  	background-color: rgba(0,128,128,0.4);
 }
 
+.options-modal-close {
+	color: #aaa;
+  	float: right;
+  	font-size: 1.5rem;
+  	font-weight: bold;
+}
+
+.options-modal-close:hover,
+.options-modal-close:focus {
+  color: teal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.options-modal-content {
+  background-color: #fefefe;
+  margin: 4% auto;
+  padding: 5em;
+  width: 95%;
+}
 
 .work-area {
 	max-width: 1024px;
-
 }
