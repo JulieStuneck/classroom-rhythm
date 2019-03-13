@@ -1,20 +1,42 @@
-//hover - pointer on notes
-//click on note at bottom and add to measure
-//functionality for top menu
-
 //CHOICES AT TOP BAR
-  //started - commented out until I come back to it//
-/*const numBeats = document.querySelectorAll('.num-beats');
-const meterTop = document.getElementById('meter-top');
+const meterBtn = document.getElementById('meter-btn');
+const meterModal = document.getElementById('meter-modal');
+const closeMeter = document.getElementById('meter-close');
 
-numBeats.forEach(el => {
-  el.addEventListener('click', event => {
-    console.log('beat choice is ' + event.value);
-  })
-});*/
+const beatsBtn = document.getElementById('beats-btn');
+const beatsModal = document.getElementById('num-beats-modal');
+const closeBeats = document.getElementById('beats-close');
 
-/*if (numBeats.value = 2) 
-*/
+const valuesBtn = document.getElementById('note-values-btn');
+const valuesModal = document.getElementById('note-values-modal');
+const closeValues = document.getElementById('values-close');
+
+//Meter Modal
+meterBtn.onclick = function() {
+  meterModal.style.display = "block";
+}
+
+closeMeter.onclick = function() {
+  meterModal.style.display = "none";
+}
+
+//Beats per Measure Modal
+beatsBtn.onclick = function() {
+  beatsModal.style.display = "block";
+}
+
+closeBeats.onclick = function() {
+  beatsModal.style.display = "none";
+}
+
+//Note Values Modal
+valuesBtn.onclick = function() {
+  valuesModal.style.display = "block";
+}
+
+closeValues.onclick = function() {
+  valuesModal.style.display = "none";
+}
 
 
 
@@ -46,8 +68,6 @@ chosen.forEach(el => {
   })  
 });*/
 
-
-
 //same functionality - looks better(?)
 function addChoice(e) {
     console.log('beat choice made');
@@ -56,25 +76,16 @@ function addChoice(e) {
     beatLocationParent = beatLocation.parentElement; 
 
     if (chosenRhythm.id === "eraser") {
-      //beatLocation = e.target;
-      beatLocationChild.beatLocation.removeChild(beatLocationChild[0]); 
+      beatLocation = e.target;
+      beatLocation.beatLocationParent.removeChild(beatLocation); 
     }
 
     beatLocation.appendChild(chosenRhythm);    
 }
 
-/*function removeChoice(e) {
-      if (chosenRhythm.id === "eraser") {
-      beatLocationChild.beatLocation.removeChild(beatLocationChild[0]); 
-    }
-}*/
-
-/*removeChoice();*/
-
 beats.forEach(el => {   
-    el.onclick = addChoice; //same results  
-    
-    //el.addEventListener('click', addChoice);
+    //el.onclick = addChoice; //same results      
+    el.addEventListener('click', addChoice);
 });
 
 
@@ -88,28 +99,3 @@ beats.forEach(el => {
 }*/
 
 
-
-
-//This works, but is not what I want it to do:
-/*beats.forEach(el => {
- el.addEventListener('click', event => {
-    console.log('a beat was clicked');
-    beatLocation = event.target.parentNode;
-    beatLocation.appendChild(copyTarget);
-  })  
-});*/
-
-
-
-
-
-
-//erase a rhythm
-
-/*if (copyTarget === '.eraser') {
-        event.target.beatLocation.removeChild('.choice');
-      }
-*/
-
-//check for children:
- //if (element.childNodes.length > 0)
