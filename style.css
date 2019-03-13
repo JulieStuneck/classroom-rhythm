@@ -66,62 +66,42 @@ button {
 	font-weight: 700;
 }
 
-.parameters {
-	display: flex;
-	padding: 0em 10em;
-	justify-content: space-around;
-	background-color: #ccc;	
+.options-btn {
+
 }
 
-.param-btn {
-	border-radius: 25%;
+.options-modal {
+	display: none; 
+  	position: fixed; 
+  	z-index: 1;
+  	left: 10%;
+  	top: 10%;
+ 	width: 80%;
+  	height: 80%; 
+  	overflow: auto;
+  	background-color: rgba(0,128,128,0.4);
 }
 
-#meter-modal, #num-beats-modal, #note-values-modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 75%;
-}
-
-.param-modal-content {
-	background-color: #eee;
-	border: 1px solid #888;
-	color: teal;
-	margin-top: 10%; 
-	margin-left: 50%;
-  	padding: 3em;  	
-  	width: 20em;
-}
-
-.param-modal-close {
+.options-modal-close {
 	color: #aaa;
-  	float: right;  	
+  	float: right;
+  	font-size: 1.5rem;
+  	font-weight: bold;
 }
 
-.param-modal-close:hover,
-.param-modal-close:focus {
+.options-modal-close:hover,
+.options-modal-close:focus {
   color: teal;
   text-decoration: none;
   cursor: pointer;
 }
 
-.parameters:hover {
-	display: block;	
+.options-modal-content {
+  background-color: #fefefe;
+  margin: 4% auto;
+  padding: 5em;
+  width: 95%;
 }
-
-
-.work-area {
-	max-width: 1024px;
-}
-
-.parameters:hover {
-	display: block;
-	
-}
-
 
 .work-area {
 	max-width: 1024px;
