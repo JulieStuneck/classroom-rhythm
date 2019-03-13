@@ -18,45 +18,46 @@
 			<button class="options-btn" id="options-btn">Options</button>
 			<div class="options-modal" id="options-modal">				
 				<div class="options-modal-content">
-					<h3>Options</h3>
+					<h2>Options</h2>
 					<div class="modal-content-columns">
-						<div class="column-one">
-							<label>Meter</label>
-							<div>
-								<input type="radio" name="meter" value="duple">Duple<br>
+						<div class="column-one">							
+							<div class="options-group">
+								<h4 class="label">Meter</h4>
+								<input type="radio" name="meter" value="duple" checked>Duple<br>
 								<input type="radio" name="meter" value ="compound">Compound<br>
 							</div>
-
-							<label>Beats per Measure</label>
-							<div>
+							
+							<div class="options-group">
+								<h4>Beats per Measure</h4>
 								<input type="radio" name="num-beats" value="2">2<br>
 								<input type="radio" name="num-beats" value="3">3<br>
-								<input type="radio" name="num-beats" value="4">4<br>
+								<input type="radio" name="num-beats" value="4" checked>4<br>
 								<input type="radio" name="num-beats" value="6">6<br>			
 							</div>
-
-							<label>Number of Measures</label>
-							<div>
-								<input type="radio" name="num-meas" value="2">2<br>
+							
+							<div class="options-group">
+								<h4>Number of Measures</h4>
+								<input type="radio" name="num-meas" value="2" checked>2<br>
 								<input type="radio" name="num-meas" value="4">4<br>
 								<input type="radio" name="num-meas" value="8">8<br>				
 							</div>						
 						</div> <!-- end column-one -->				
 
-						<div class="column-two">
-							<label>Note Values</label>
-							<p>Select which types of rhythms you would like to use:</p>
+						<div class="column-two">							
 							<div>
-								<input type="checkbox" name="note-value" value="whole">Whole Note<br>
-								<input type="checkbox" name="note-value" value="half">Half Note<br>
-								<input type="checkbox" name="note-value" value="quater">Quarter Note<br>
-								<input type="checkbox" name="note-value" value="two-eighths">Two Eighth Notes<br>
+								<h4>Note Values</h4>
+								<p>Select which types of rhythms you would like to use:</p>
+								<input type="checkbox" name="note-value" value="whole" checked>Whole Note<br>
+								<input type="checkbox" name="note-value" value="half" checked>Half Note<br>
+								<input type="checkbox" name="note-value" value="quater" checked>Quarter Note<br>
+								<input type="checkbox" name="note-value" value="two-eighths" checked>Two Eighth Notes<br>
 								<input type="checkbox" name="note-value" value="quater-rest">Quarter Rest<br>
 							</div>						
-						</div>
 						</div> <!-- end column-two -->
-					
-					<div class="options-modal-close" id="options-close">Done</div>		
+					</div> <!-- end modal-content-columns -->
+
+					<div class="options-modal-close" id="options-close">Done</div>	
+
 				</div> <!-- end options-modal-content -->						
 			</div> <!-- end options-modal -->			
 		</section> <!-- end options -->
@@ -87,10 +88,6 @@
 
 		<section class="choice-container">
 			<div>
-				<h3>Eraser</h3>				
-				<img src="./Images/eraser-tiny.png" alt="eraser."  class="choice" id="eraser">
-			</div>
-			<div>
 				<h3>Whole Note</h3>
 				<figure> <!-- May not need to be in figure -->
 					<img src="./Images/whole5.png" alt="whole note." class="choice">
@@ -110,6 +107,10 @@
 			<div>
 				<h3>Eighth Notes</h3>
 				<img src="./Images/two-eighths5.png" alt="two eigth-notes." draggable="true" class="choice">
+			</div>
+			<div>
+				<h3>Eraser</h3>				
+				<img src="./Images/eraser-tiny.png" alt="eraser."  class="choice" id="eraser">
 			</div>
 		</section> <!-- end note-choices -->
 

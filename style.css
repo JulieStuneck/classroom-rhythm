@@ -53,6 +53,10 @@ button {
 	color: teal;
 }
 
+h4 {
+	
+}
+
 .measure {
 	display: flex;
 	margin-left: 4rem;
@@ -74,14 +78,13 @@ button {
 	display: none; 
   	position: fixed; 
   	z-index: 1;
-  	left: 10%;
-  	top: 10%;
- 	width: 80%;
-  	height: 80%; 
-  	overflow: auto;
+  	left: 5%;
+  	top: 5%;
+ 	width: 90%;
+  	height: 90%; 
+/*  	overflow: auto;*/
   	font-family: sans-serif;
 }
-
 
 .options-modal-close {
 	color: #aaa;
@@ -105,15 +108,24 @@ button {
   width: 95%;
 }
 
-.options-modal-content h3 {
+.options-modal-content h2 {
 	margin-left: 45%;
 	margin-bottom: 2rem;
+}
+
+.options-modal-content p {
+	margin-bottom: 1rem;
 }
 
 .modal-content-columns {
 	display: flex;
 	justify-content: space-around;
 }
+
+.options-group {
+	margin-bottom: 1.5em;
+}
+
 
 .work-area {
 	max-width: 1024px;
