@@ -14,21 +14,33 @@
 		</section> <!-- end heading -->
 
 		<section class="parameters">
-			<button>Meter:
-				<select name="meter">
-					<option>duple</option>
-					<option>compound</option>
-				</select>	
-			</button>
+			<button class="param-btn" id="meter-btn">Meter</button>
+			<div id="meter-modal">
+				<div class="param-modal-content">
+					<input type="radio" name="meter" value="duple">Duple<br>
+					<input type="radio" name="meter" value ="compound">Compound<br>
+					<div class="param-modal-close" id="meter-close">Done</div>
+				</div>
+			</div>				
+			
 
-			<button>Beats/Measure:
-				<select name="num-beats">					
+			<button class="param-btn" id="beats-btn">Beats/Measure</button>
+			<div id="num-beats-modal">
+				<div class="param-modal-content">
+					<input type="radio" name="num-beats" value="2">2<br>
+					<input type="radio" name="num-beats" value="3">3<br>
+					<input type="radio" name="num-beats" value="4">4<br>
+					<input type="radio" name="num-beats" value="6">6<br>
+					<div class="param-modal-close" id="beats-close">Done</div>
+				</div>
+			</div>
+				<!-- <select name="num-beats">					
 					<option class="num-beats" value="2">2</option>
 					<option class="num-beats" value="3">3</option>
 					<option class="num-beats" value="4">4</option>	
-					<option class="num-beats" value="5">6</option>				
-				</select>	
-			</button>
+					<option class="num-beats" value="5">6</option>	
+				</select>	 -->
+			
 
 			<button>Number of Measures:
 				<select name="num-measures">
@@ -39,14 +51,25 @@
 				</select>	
 			</button>
 
-			<button>Note Values:
-				<select name="note-values">
+			<button class="param-btn" id="note-values-btn">Note Values</button>
+			<div id="note-values-modal">
+				<div class="param-modal-content">
+					<p>Select which types of rhythms you would like to use:</p>
+					<input type="checkbox" name="note-value" value="whole">Whole Note<br>
+					<input type="checkbox" name="note-value" value="half">Half Note<br>
+					<input type="checkbox" name="note-value" value="quater">Quarter Note<br>
+					<input type="checkbox" name="note-value" value="two-eighths">Two Eighth Notes<br>
+					<input type="checkbox" name="note-value" value="quater-rest">Quarter Rest<br>
+					<div class="param-modal-close" id="values-close">Done</div>
+				</div>
+			</div>
+				<!-- <select name="note-values">
 					<option>whole</option>
 					<option>half</option>
 					<option>quarter</option>
 					<option>eigth</option>
-				</select>	
-			</button>			
+				</select>	 -->
+
 		</section> <!-- end parameters -->
 
 		<section class="work-area">
@@ -55,8 +78,12 @@
 				<div class="meter-bottom">4</div>				
 			</div>
 			<div class="measure">
-				<div class="beat-line" id="beat-1"></div>
-				<div class="beat-line" id="beat-2"></div>
+				<div class="beat-line" id="beat-1">
+					<p>&#9833</p>
+				</div>
+				<div class="beat-line" id="beat-2">
+					<figure></figure>
+				</div>
 				<div class="beat-line" id="beat-3"></div>
 				<div class="beat-line"></div>
 				<div class="bar-line"></div>
@@ -76,11 +103,16 @@
 			</div>
 			<div>
 				<h3>Whole Note</h3>
-				<img src="./Images/whole5.png" alt="whole note." class="choice">
+				<figure> <!-- May not need to be in figure -->
+					<img src="./Images/whole5.png" alt="whole note." class="choice">
+				</figure>
+				
 			</div>
 			<div>
 				<h3>Half Note</h3>
-				<img src="./Images/half5.png" alt="half note." class="choice">
+				<figure>
+					<img src="./Images/half5.png" alt="half note." class="choice">
+				</figure>
 			</div>
 			<div>
 				<h3>Quarter Note</h3>
