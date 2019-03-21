@@ -44,7 +44,7 @@ const chosen = Array.from(choices);
 const beats = Array.from(beat);
 
 
-//Choose rhythm 
+  //Choose rhythm 
 
 chosen.forEach(el => {
   el.addEventListener('click', event => {
@@ -54,7 +54,7 @@ chosen.forEach(el => {
 });
 
 
-//add rhythm to measure (work-area) 
+  //add rhythm to measure (work-area) 
 
 /*beats.forEach(el => {
  el.addEventListener('click', event => {
@@ -64,7 +64,7 @@ chosen.forEach(el => {
   })  
 });*/
 
-//same functionality - looks better(?)
+  //same functionality - looks better(?)
 function addChoice(e) {
     console.log('beat choice made');
     beatLocation = e.target;  
