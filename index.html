@@ -23,23 +23,40 @@
 						<div class="column-one">							
 							<div class="options-group">
 								<h4 class="label">Meter</h4>
-								<input type="radio" name="meter" value="duple" checked>Duple<br>
-								<input type="radio" name="meter" value ="compound">Compound<br>
+								<label for="duple">Duple</label>
+								<input type="radio" name="meter" id="duple" value="duple" checked><br>
+
+								<label for="compound">Compound</label>
+								<input type="radio" name="meter" id="compound" value ="compound"><br>
 							</div>
 							
 							<div class="options-group">
-								<h4>Beats per Measure</h4>
-								<input type="radio" name="num-beats" value="2">2<br>
-								<input type="radio" name="num-beats" value="3">3<br>
-								<input type="radio" name="num-beats" value="4" checked>4<br>
-								<input type="radio" name="num-beats" value="6">6<br>			
+								<fieldset>
+									<h4>Beats per Measure</h4>
+									<label for="meterTop2">2</label>
+									<input type="radio" name="num-beats" id="meterTop2" value="2"><br>
+
+									<label for="meterTop3">3</label>
+									<input type="radio" name="num-beats" id="meterTop3" value="3"><br>
+
+									<label for="meterTop4">4</label>
+									<input type="radio" name="num-beats" id="meterTop4" value="4" checked><br>
+
+									<label for="meterTop6">6</label>
+									<input type="radio" name="num-beats" id="meterTop6" value="6"><br>	
+								</fieldset>		
 							</div>
 							
 							<div class="options-group">
 								<h4>Number of Measures</h4>
-								<input type="radio" name="num-meas" value="2" checked>2<br>
-								<input type="radio" name="num-meas" value="4">4<br>
-								<input type="radio" name="num-meas" value="8">8<br>				
+								<label for="numMeas2">2</label>
+								<input type="radio" name="num-meas" id="numMeas2" value="2" checked><br>
+
+								<label for="numMeas4">4</label>
+								<input type="radio" name="num-meas" id="numMeas4" value="4"><br>
+
+								<label for="numMeas8">8</label>
+								<input type="radio" name="num-meas" id="numMeas8" value="8"><br>				
 							</div>						
 						</div> <!-- end column-one -->				
 
@@ -65,12 +82,12 @@
 
 		<section class="work-area">
 			<div class="meter">
-				<div id="meter-top">4</div>
+				<div id="meter-top">?</div>
 				<div class="meter-bottom">4</div>				
 			</div>
 			<div class="measure">
 				<div class="beat-line" id="beat-1">
-					<p>&#9833</p>
+					<p>&#9833</p> <!-- for testing to see changes - delete -->
 				</div>
 				<div class="beat-line" id="beat-2">
 					<figure></figure>
