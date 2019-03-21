@@ -2,8 +2,11 @@
 const optionsBtn = document.getElementById('options-btn');
 const optionsModal = document.getElementById('options-modal');
 const closeOptions = document.getElementById('options-close');
+const meterTop = document.getElementById('meter-top');
 
-//Meter Modal
+//const numBeats = Array.from(num-beats);
+
+  //Open/Close Modal
 optionsBtn.onclick = function() {
   optionsModal.style.display = "block";
 }
@@ -11,6 +14,20 @@ optionsBtn.onclick = function() {
 closeOptions.onclick = function() {
  optionsModal.style.display = "none";
 }
+
+  //Change Options based on user choice
+if (document.getElementById("meterTop2").checked === true) {
+  meterTop.innerHTML = "2";
+} else if (document.getElementById("meterTop3").checked === true) {
+  meterTop.innerHTML = "3";
+} else if (document.getElementById("meterTop4").checked === true) {
+  meterTop.innerHTML = "4";
+} else if (document.getElementById("meterTop6").checked === true) {
+  meterTop.innerHTML = "6";
+}
+
+
+
 
 
 

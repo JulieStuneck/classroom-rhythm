@@ -82,15 +82,17 @@ h4 {
   	top: 5%;
  	width: 90%;
   	height: 90%; 
-/*  	overflow: auto;*/
   	font-family: sans-serif;
 }
 
 .options-modal-close {
+	border: solid .05em teal;
+  	border-radius: 30%;
 	color: #aaa;
   	float: right;
   	font-size: 1.5rem;
   	font-weight: bold;
+  	padding: .25em;
 }
 
 .options-modal-close:hover,
