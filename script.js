@@ -2,9 +2,11 @@
 const optionsBtn = document.getElementById('options-btn');
 const optionsModal = document.getElementById('options-modal');
 const closeOptions = document.getElementById('options-close');
+
+const radioChoice = document.querySelectorAll('meter-top-radio'); //comes back with an empty node list
 const meterTop = document.getElementById('meter-top');
 
-//const numBeats = Array.from(num-beats);
+const numBeats = Array.from(radioChoice);
 
   //Open/Close Modal
 optionsBtn.onclick = function() {
@@ -16,6 +18,11 @@ closeOptions.onclick = function() {
 }
 
   //Change Options based on user choice
+
+/*function numBeatsChoice(e) {
+
+}*/
+
 if (document.getElementById("meterTop2").checked === true) {
   meterTop.innerHTML = "2";
 } else if (document.getElementById("meterTop3").checked === true) {
@@ -25,9 +32,6 @@ if (document.getElementById("meterTop2").checked === true) {
 } else if (document.getElementById("meterTop6").checked === true) {
   meterTop.innerHTML = "6";
 }
-
-
-
 
 
 
@@ -80,7 +84,8 @@ beats.forEach(el => {
     el.addEventListener('click', addChoice);
 });
 
-
+/*for remembering:
+if (el) el.parentElement.removeChild(el);*/
 
 
 //Trying to specify chosen beat by id
