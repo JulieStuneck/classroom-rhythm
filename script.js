@@ -3,10 +3,14 @@ const optionsBtn = document.getElementById('options-btn');
 const optionsModal = document.getElementById('options-modal');
 const closeOptions = document.getElementById('options-close');
 
-const radioChoice = document.querySelectorAll('meter-top-radio'); //comes back with an empty node list
+const numBeatsChoice = document.querySelectorAll('.meter-top-radio'); 
+const numBeats = Array.from(numBeatsChoice);
 const meterTop = document.getElementById('meter-top');
 
-const numBeats = Array.from(radioChoice);
+const meterTypeChoice = document.querySelectorAll('.meter-bottom-radio');
+const meterType = Array.from(meterTypeChoice);
+const meterBottom = document.getElementById('meter-bottom');
+
 
   //Open/Close Modal
 optionsBtn.onclick = function() {
@@ -17,21 +21,46 @@ closeOptions.onclick = function() {
  optionsModal.style.display = "none";
 }
 
-  //Change Options based on user choice
 
-/*function numBeatsChoice(e) {
+  //Change Beats per measure (meter top)
+numBeats.forEach(el => {
+  el.addEventListener('click', event => {
+    console.log('meter top was selected');
+    selectNumBeats();
+  })
+});
 
-}*/
+function selectNumBeats(e) {
+  if (document.getElementById("meterTop2").checked === true) {
+    meterTop.innerHTML = "2";
+  } else if (document.getElementById("meterTop3").checked === true) {
+    meterTop.innerHTML = "3";
+  } else if (document.getElementById("meterTop4").checked === true) {
+    meterTop.innerHTML = "4";
+  } else if (document.getElementById("meterTop6").checked === true) {
+    meterTop.innerHTML = "6";
+  }
+};
 
-if (document.getElementById("meterTop2").checked === true) {
-  meterTop.innerHTML = "2";
-} else if (document.getElementById("meterTop3").checked === true) {
-  meterTop.innerHTML = "3";
-} else if (document.getElementById("meterTop4").checked === true) {
-  meterTop.innerHTML = "4";
-} else if (document.getElementById("meterTop6").checked === true) {
-  meterTop.innerHTML = "6";
+  //Change type of meter (meter bottom)
+meterType.forEach(el => {
+  el.addEventListener('click', event => {
+    console.log('meter bottom was selected');
+    selectMeterType();
+  })
+});
+
+function selectMeterType(e) {
+  if (document.getElementById('meterBottom2').checked === true) {
+    meterBottom.innerHTML = '2';
+  } else if (document.getElementById('meterBottom4').checked === true) {
+    meterBottom.innerHTML = '4';
+  } else if (document.getElementById('meterBottom8').checked === true) {
+    meterBottom.innerHTML = '8';
+  }
 }
+
+
 
 
 
