@@ -20,16 +20,7 @@
 				<div class="options-modal-content">
 					<h2>Options</h2>
 					<div class="modal-content-columns">
-						<div class="column-one">							
-							<div class="options-group">
-								<h4 class="label">Meter</h4>
-								<label for="duple">Duple</label>
-								<input type="radio" name="meter" id="duple" value="duple" checked><br>
-
-								<label for="compound">Compound</label>
-								<input type="radio" name="meter" id="compound" value ="compound"><br>
-							</div>
-							
+						<div class="column-one">													
 							<div class="options-group">
 								<fieldset>
 									<h4>Beats per Measure</h4>
@@ -45,6 +36,18 @@
 									<label for="meterTop6">6</label>
 									<input type="radio" name="num-beats" id="meterTop6" class="meter-top-radio" value="6"><br>	
 								</fieldset>		
+							</div>
+
+							<div class="options-group">
+								<h4 class="label">Meter</h4>
+								<label for="meterBottom2">2</label>
+								<input type="radio" name="meter" id="meterBottom2" class="meter-bottom-radio" value="2" checked><br>
+
+								<label for="meterBottom4">4</label>
+								<input type="radio" name="meter" id="meterBottom4" class="meter-bottom-radio" value="4" checked><br>
+
+								<label for="meterBottom8">8</label>
+								<input type="radio" name="meter" id="meterBottom8" class="meter-bottom-radio" value ="8"><br>
 							</div>
 							
 							<div class="options-group">
@@ -83,7 +86,7 @@
 		<section class="work-area">
 			<div class="meter">
 				<div id="meter-top">?</div>
-				<div class="meter-bottom">4</div>				
+				<div id="meter-bottom">?</div>				
 			</div>
 			<div class="measure">
 				<div class="beat-line" id="beat-1">
