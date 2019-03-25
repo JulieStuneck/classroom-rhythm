@@ -33,11 +33,15 @@ button {
 }
 
 .choice {
-	cursor: pointer;	
+	cursor: pointer;
 }
 
 .choice:hover {
 	border: 3px solid yellow;
+}
+
+.choice-hide-show {
+	display: none;
 }
 
 .container {
@@ -72,6 +76,12 @@ h4 {
 
 
 /*OPTIONS MODAL*/
+
+.modal-content-columns {
+	display: flex;
+	justify-content: space-around;
+}
+
 .options-modal {
 	background-color: rgba(0,128,128,0.4);
 	color: white;
@@ -80,8 +90,8 @@ h4 {
   	z-index: 1;
   	left: 5%;
   	top: 5%;
- 	width: 90%;
-  	height: 90%; 
+ 	width: 80%;
+  	height: 80%; 
   	font-family: sans-serif;
 }
 
@@ -89,9 +99,11 @@ h4 {
 	border: solid .05em teal;
   	border-radius: 30%;
 	color: #aaa;
+	cursor: pointer;
   	float: right;
-  	font-size: 1.5rem;
+  	font-size: 1.25rem;
   	font-weight: bold;
+  	margin-right: 5em;
   	padding: .25em;
 }
 
@@ -105,8 +117,9 @@ h4 {
 .options-modal-content {
   background-color: #fefefe;
   color: black;
-  margin: 4% auto;
-  padding: 5em;
+  margin: 1% auto;
+  padding: 3em;
+  height: 95%;
   width: 95%;
 }
 
@@ -119,13 +132,16 @@ h4 {
 	margin-bottom: 1rem;
 }
 
-.modal-content-columns {
-	display: flex;
-	justify-content: space-around;
-}
-
 .options-group {
 	margin-bottom: 1.5em;
+}
+
+.options-group input, .column-two input {
+	cursor: pointer;
+}
+
+.options-group label {
+	cursor: pointer;
 }
 
 
