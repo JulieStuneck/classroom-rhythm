@@ -73,11 +73,17 @@ noteValues.forEach(el => {
   })
 })
 
-const wholeNote = document.getElementById('choice-whole-note');
+  //Items in the Choices Container:
+const wholeNote = document.getElementById('choice-whole');
+const halfNote = document.getElementById('choice-half');
+const quarterNote = document.getElementById('choice-quarter');
+const twoEighths = document.getElementById('choice-2eighths');
 
 function selectRhythmValues(e) {
     document.getElementById('rhythmValueWhole').checked ? wholeNote.style.display = "block" : wholeNote.style.display = "none";
-
+    document.getElementById('rhythmValuehalf').checked ? halfNote.style.display = "block" : halfNote.style.display = "none";
+    document.getElementById('rhythmValuequarter').checked ? quarterNote.style.display = "block" : quarterNote.style.display = "none";
+    document.getElementById('rhythmValue2Eights').checked ? twoEighths.style.display = "block" : twoEighths.style.display = "none";
 }
 
 
