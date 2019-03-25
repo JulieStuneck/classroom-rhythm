@@ -11,6 +11,9 @@ const meterTypeChoice = document.querySelectorAll('.meter-bottom-radio');
 const meterType = Array.from(meterTypeChoice);
 const meterBottom = document.getElementById('meter-bottom');
 
+const noteValueChoices = document.querySelectorAll('.note-value-checkbox');
+const noteValues = Array.from(noteValueChoices);
+
 
   //Open/Close Modal
 optionsBtn.onclick = function() {
@@ -22,7 +25,7 @@ closeOptions.onclick = function() {
 }
 
 
-  //Change Beats per measure (meter top)
+  //Select Beats per measure (meter top)
 numBeats.forEach(el => {
   el.addEventListener('click', event => {
     console.log('meter top was selected');
@@ -42,10 +45,9 @@ function selectNumBeats(e) {
   }
 };
 
-  //Change type of meter (meter bottom)
+  //Select type of meter (meter bottom)
 meterType.forEach(el => {
   el.addEventListener('click', event => {
-    console.log('meter bottom was selected');
     selectMeterType();
   })
 });
@@ -60,8 +62,23 @@ function selectMeterType(e) {
   }
 }
 
+  //Select Number of Measures  //future - add template strings based on selection
 
 
+  //Select Note Value Options  //future - add template strings based on selection
+noteValues.forEach(el => {
+  el.addEventListener('click', event => {
+    console.log('rhythm checked');
+    selectRhythmValues();
+  })
+})
+
+const wholeNote = document.getElementById('choice-whole-note');
+
+function selectRhythmValues(e) {
+    document.getElementById('rhythmValueWhole').checked ? wholeNote.style.display = "block" : wholeNote.style.display = "none";
+
+}
 
 
 

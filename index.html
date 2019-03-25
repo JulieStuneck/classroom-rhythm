@@ -8,7 +8,7 @@
 <body>
 <!-- 	<div id="test"></div> -->
 	<div class="container">
-
+		<!-- <span><button class="options-btn" id="options-btn">Options</button></span> --> 
 		<section class="heading">
 			<h1>Rhythm Creator</h1>
 		</section> <!-- end heading -->
@@ -67,11 +67,11 @@
 							<div>
 								<h4>Note Values</h4>
 								<p>Select which types of rhythms you would like to use:</p>
-								<input type="checkbox" name="note-value" value="whole" checked>Whole Note<br>
-								<input type="checkbox" name="note-value" value="half" checked>Half Note<br>
-								<input type="checkbox" name="note-value" value="quater" checked>Quarter Note<br>
-								<input type="checkbox" name="note-value" value="two-eighths" checked>Two Eighth Notes<br>
-								<input type="checkbox" name="note-value" value="quater-rest">Quarter Rest<br>
+								<input type="checkbox" name="note-value" id="rhythmValueWhole" class="note-value-checkbox" value="whole" checked>Whole Note<br>
+								<input type="checkbox" name="note-value" id="rhythmValuehalf"class="note-value-checkbox" value="half" checked>Half Note<br>
+								<input type="checkbox" name="note-value" id="rhythmValuequarter" class="note-value-checkbox" value="quarter" checked>Quarter Note<br>
+								<input type="checkbox" name="note-value" id="rhythmValue2Eights"class="note-value-checkbox" value="two-eighths" checked>Two Eighth Notes<br>
+								<input type="checkbox" name="note-value" id="rhythmValueQuarterRest" class="note-value-checkbox" value="quater-rest">Quarter Rest<br>
 							</div>						
 						</div> <!-- end column-two -->
 					</div> <!-- end modal-content-columns -->
@@ -107,12 +107,11 @@
 
 
 		<section class="choice-container">
-			<div>
+			<div class="choice-hide-show" id="choice-whole-note">
 				<h3>Whole Note</h3>
 				<figure> <!-- May not need to be in figure -->
 					<img src="./Images/whole5.png" alt="whole note." class="choice">
-				</figure>
-				
+				</figure>				
 			</div>
 			<div>
 				<h3>Half Note</h3>
