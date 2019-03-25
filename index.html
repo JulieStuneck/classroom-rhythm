@@ -22,20 +22,18 @@
 					<div class="modal-content-columns">
 						<div class="column-one">													
 							<div class="options-group">
-								<fieldset>
-									<h4>Beats per Measure</h4>
-									<label for="meterTop2">2</label>
-									<input type="radio" name="num-beats" id="meterTop2" class="meter-top-radio" value="2"><br>
+								<h4>Beats per Measure</h4>
+								<label for="meterTop2">2</label>
+								<input type="radio" name="num-beats" id="meterTop2" class="meter-top-radio" value="2"><br>
 
-									<label for="meterTop3">3</label>
-									<input type="radio" name="num-beats" id="meterTop3" class="meter-top-radio" value="3"><br>
+								<label for="meterTop3">3</label>
+								<input type="radio" name="num-beats" id="meterTop3" class="meter-top-radio" value="3"><br>
 
-									<label for="meterTop4">4</label>
-									<input type="radio" name="num-beats" id="meterTop4" class="meter-top-radio" value="4" checked><br>
+								<label for="meterTop4">4</label>
+								<input type="radio" name="num-beats" id="meterTop4" class="meter-top-radio" value="4" checked><br>
 
-									<label for="meterTop6">6</label>
-									<input type="radio" name="num-beats" id="meterTop6" class="meter-top-radio" value="6"><br>	
-								</fieldset>		
+								<label for="meterTop6">6</label>
+								<input type="radio" name="num-beats" id="meterTop6" class="meter-top-radio" value="6"><br>	
 							</div>
 
 							<div class="options-group">
@@ -71,7 +69,7 @@
 								<input type="checkbox" name="note-value" id="rhythmValuehalf"class="note-value-checkbox" value="half" checked>Half Note<br>
 								<input type="checkbox" name="note-value" id="rhythmValuequarter" class="note-value-checkbox" value="quarter" checked>Quarter Note<br>
 								<input type="checkbox" name="note-value" id="rhythmValue2Eights"class="note-value-checkbox" value="two-eighths" checked>Two Eighth Notes<br>
-								<input type="checkbox" name="note-value" id="rhythmValueQuarterRest" class="note-value-checkbox" value="quater-rest">Quarter Rest<br>
+								<input type="checkbox" name="note-value" id="rhythmValueQuarterRest" class="note-value-checkbox" value="quater-rest">Quarter Rest (coming soon...)<br>
 							</div>						
 						</div> <!-- end column-two -->
 					</div> <!-- end modal-content-columns -->
@@ -85,16 +83,16 @@
 
 		<section class="work-area">
 			<div class="meter">
-				<div id="meter-top">?</div>
-				<div id="meter-bottom">?</div>				
+				<span id="meter-top">4</span>
+				<span id="meter-bottom">4</span>				
 			</div>
 			<div class="measure">
 				<div class="beat-line" id="beat-1">
-					<p>&#9833</p> <!-- for testing to see changes - delete -->
+					<!-- <p>&#9833</p> --> <!-- for testing to see changes - delete -->
 				</div>
 				<div class="beat-line" id="beat-2">
-					<figure></figure>
 				</div>
+				<div class="beat-line"></div>
 				<div class="beat-line"></div>
 				<div class="bar-line"></div>
 				<div class="beat-line"></div>
@@ -107,23 +105,23 @@
 
 
 		<section class="choice-container">
-			<div class="choice-hide-show" id="choice-whole-note">
+			<div class="choice-hide-show" id="choice-whole">
 				<h3>Whole Note</h3>
 				<figure> <!-- May not need to be in figure -->
 					<img src="./Images/whole5.png" alt="whole note." class="choice">
 				</figure>				
 			</div>
-			<div>
+			<div class="choice-hide-show" id="choice-half">
 				<h3>Half Note</h3>
 				<figure>
 					<img src="./Images/half5.png" alt="half note." class="choice">
 				</figure>
 			</div>
-			<div>
+			<div class="choice-hide-show" id="choice-quarter">
 				<h3>Quarter Note</h3>
 				<img src="./Images/quarter5.png" alt="quarter note." class="choice">
 			</div>
-			<div>
+			<div class="choice-hide-show" id="choice-2eighths">
 				<h3>Eighth Notes</h3>
 				<img src="./Images/two-eighths5.png" alt="two eigth-notes." draggable="true" class="choice">
 			</div>

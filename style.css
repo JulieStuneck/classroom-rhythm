@@ -41,7 +41,7 @@ button {
 }
 
 .choice-hide-show {
-	display: none;
+	/*display: none;*/
 }
 
 .container {
@@ -67,7 +67,9 @@ h4 {
 }
 
 .meter {
-	padding-top: 3em;
+	display: flex;
+	flex-direction: column;
+	float: left;
 	margin-left: .25em;
 	font-family: serif;
 	font-size: 3.5rem;
@@ -146,5 +148,6 @@ h4 {
 
 
 .work-area {
+	margin-top: 3em;
 	max-width: 1024px;
 }
