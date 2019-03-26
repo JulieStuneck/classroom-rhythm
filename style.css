@@ -49,6 +49,16 @@ button {
 	grid-template-rows: auto auto 3fr 1fr;
 }
 
+.double-bar-line {
+	display: flex;
+	float: right;
+}
+
+.dbl-2nd {
+	border-left: .3em solid #222;	
+	margin-left: .25em;
+}
+
 .heading {
 	display: flex;
 	justify-content: center;
