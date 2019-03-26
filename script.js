@@ -6,6 +6,7 @@ const closeOptions = document.getElementById('options-close');
 const numBeatsChoice = document.querySelectorAll('.meter-top-radio'); 
 const numBeats = Array.from(numBeatsChoice);
 const meterTop = document.getElementById('meter-top');
+const twoBeats = document.getElementById("meterTop2");
 
 const meterTypeChoice = document.querySelectorAll('.meter-bottom-radio');
 const meterType = Array.from(meterTypeChoice);
@@ -13,6 +14,13 @@ const meterBottom = document.getElementById('meter-bottom');
 
 const noteValueChoices = document.querySelectorAll('.note-value-checkbox');
 const noteValues = Array.from(noteValueChoices);
+
+const measView = document.querySelector('.measure');
+
+const wholeNote = document.getElementById('choice-whole');
+const halfNote = document.getElementById('choice-half');
+const quarterNote = document.getElementById('choice-quarter');
+const twoEighths = document.getElementById('choice-2eighths');
 
 
   //Open/Close Modal
@@ -30,20 +38,59 @@ numBeats.forEach(el => {
   el.addEventListener('click', event => {
     console.log('meter top was selected');
     selectNumBeats();
+/*    renderMeasureChoice();*/
   })
 });
 
 function selectNumBeats(e) {
-  if (document.getElementById("meterTop2").checked === true) {
+  if (twoBeats.checked === true) {
     meterTop.innerHTML = "2";
+    measView.insertAdjacentHTML('afterbegin', twoBeatsView);
   } else if (document.getElementById("meterTop3").checked === true) {
     meterTop.innerHTML = "3";
+    measView.insertAdjacentHTML('afterbegin', threeBeatsView);
   } else if (document.getElementById("meterTop4").checked === true) {
     meterTop.innerHTML = "4";
+    measView.insertAdjacentHTML('afterbegin', fourBeatsView);
   } else if (document.getElementById("meterTop6").checked === true) {
     meterTop.innerHTML = "6";
+    measView.insertAdjacentHTML('afterbegin', sixBeatsView);
   }
 };
+
+const twoBeatsView = `
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="bar-line"></div>`;
+
+const threeBeatsView = `
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="bar-line"></div>        
+`;
+
+const fourBeatsView = `
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="bar-line"></div>        
+`;
+
+const sixBeatsView = `
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>
+        <div class="beat-line"></div>        
+        <div class="bar-line"></div>        
+`;
+
+
+
+
 
   //Select type of meter (meter bottom)
 meterType.forEach(el => {
@@ -62,8 +109,11 @@ function selectMeterType(e) {
   }
 }
 
-  //Select Number of Measures  //future - add template strings based on selection
 
+
+
+
+  //Select Number of Measures  //future - add template strings based on selection
 
   //Select Note Value Options  //future - add template strings based on selection
 noteValues.forEach(el => {
@@ -74,10 +124,7 @@ noteValues.forEach(el => {
 })
 
   //Items in the Choices Container:
-const wholeNote = document.getElementById('choice-whole');
-const halfNote = document.getElementById('choice-half');
-const quarterNote = document.getElementById('choice-quarter');
-const twoEighths = document.getElementById('choice-2eighths');
+
 
 function selectRhythmValues(e) {
     document.getElementById('rhythmValueWhole').checked ? wholeNote.style.display = "block" : wholeNote.style.display = "none";
@@ -137,14 +184,8 @@ beats.forEach(el => {
 });
 
 /*for remembering:
-if (el) el.parentElement.removeChild(el);*/
-
-
-//Trying to specify chosen beat by id
-/*function addChoice(e) {
-    console.log('beat choice made');
-    beatLocation = e.target.getElementById(id);
-    beatLocation.appendChild(copyChosenRhythm);     
+export const deleteLike = id => {
+  const el = document.querySelector(`.likes__link[href*="${id}"]`).parentElement;
+  if (el) el.parentElement.removeChild(el);
 }*/
-
 
